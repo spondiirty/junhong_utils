@@ -31,7 +31,7 @@
 #define TRACE(var) std::cout<<#var<<" = "<<var<<endl
 #define TRACE2(var1, var2) std::cout<<#var1<<" = "<<var1<<" , "<<#var2<<" = "<<var2<<endl
 
-#define CV_SWAP(a,b,t) ((t) = (a), (a) = (b), (b) = (t))
+#define UT_SWAP(a,b,t) ((t) = (a), (a) = (b), (b) = (t))
 
 #ifndef MIN
 #	define MIN(a,b)  ((a) > (b) ? (b) : (a))
