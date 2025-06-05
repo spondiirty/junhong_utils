@@ -1,11 +1,7 @@
 #ifndef __OPENCV_UTILS_H__
 #define __OPENCV_UTILS_H__
 
-#include <opencv2\core\core.hpp>
-#include <opencv2\imgproc\imgproc.hpp>
-#include <opencv2\highgui\highgui.hpp>
-#include <opencv2\ml\ml.hpp>
-#include <opencv2\objdetect\objdetect.hpp>
+#include <opencv2/opencv.hpp>
 
 using namespace cv;
 
@@ -45,17 +41,17 @@ inline vector<int> cvuSaveOption(string type, int value) {
     for(auto &c : type) c = std::tolower(c);
     if (type == "jpg" || type == "jpeg")
     {
-        ret.push_back(CV_IMWRITE_JPEG_QUALITY);
+        ret.push_back(IMWRITE_JPEG_QUALITY);
         ret.push_back(value);
     }
     if (type == "png")
     {
-        ret.push_back(CV_IMWRITE_PNG_COMPRESSION);
+        ret.push_back(IMWRITE_PNG_COMPRESSION);
         ret.push_back(value);
     }
     if (type == "ppm" || type == "pgm" || type == "pbm")
     {
-        ret.push_back(CV_IMWRITE_PXM_BINARY);
+        ret.push_back(IMWRITE_PXM_BINARY);
         ret.push_back(value);
     }
     return ret;
@@ -185,7 +181,7 @@ inline Rect cvuSquarify(Rect rect)
 inline void cvuSafeBGR2Gray(Mat& src, Mat& tar)
 {
     if (src.channels() >= 3)
-        cvtColor(src, tar, CV_BGR2GRAY);
+        cvtColor(src, tar, COLOR_BGR2GRAY);
     else
         tar = src;
 }

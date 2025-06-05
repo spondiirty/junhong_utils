@@ -1,2 +1,4 @@
 # junhong_utils
-some utility headers that can greatly accelerate junhong's coding
+Utility headers that can accelerate Junhong's coding. The OpenCV helpers now
+use modern include paths and enumeration names so they work with OpenCV 3 and
+later.
