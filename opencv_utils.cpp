@@ -28,7 +28,7 @@ Mat cvuDebugJointImages(vector<Mat> images, int rows, int cols)
 			if (images[index].channels() == 1)
 			{
 				Mat temp;
-				cvtColor(images[index], temp, CV_GRAY2BGR);
+                                cvtColor(images[index], temp, COLOR_GRAY2BGR);
 				temp.copyTo(res(subrect));
 			}
 			else
